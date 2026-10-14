@@ -1,0 +1,18 @@
+{
+  "review": {
+    "eventTitle": "Review",
+    "eventDescription": "One review row saved to the dataset.",
+    "eventPriceUsd": 9e-05,
+    "isPrimaryEvent": true
+  },
+  "summary-report": {
+    "eventTitle": "Summary report",
+    "eventDescription": "SUMMARY.md written (once per run with \u22651 review).",
+    "eventPriceUsd": 0.001
+  },
+  "apify-actor-start": {
+    "eventTitle": "Actor start",
+    "eventDescription": "Charged once per run start.",
+    "eventPriceUsd": 5e-05
+  }
+}

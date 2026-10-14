@@ -1,0 +1,22 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "App reviews output",
+  "description": "Unified review rows + SUMMARY.md + SUMMARY.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Reviews",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "summaryMarkdown": {
+      "type": "string",
+      "title": "SUMMARY.md",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY.md"
+    },
+    "summary": {
+      "type": "string",
+      "title": "SUMMARY (JSON)",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}

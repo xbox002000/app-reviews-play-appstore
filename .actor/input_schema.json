@@ -1,0 +1,89 @@
+{
+  "title": "App reviews input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "appName": {
+      "title": "App name",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Looked up on both stores (first App Store search hit, first Google Play search hit). Ignored for a platform whose id/URL you give.",
+      "prefill": "Duolingo"
+    },
+    "playApp": {
+      "title": "Google Play package or URL",
+      "type": "string",
+      "editor": "textfield",
+      "description": "e.g. com.duolingo or https://play.google.com/store/apps/details?id=com.duolingo"
+    },
+    "appStoreApp": {
+      "title": "App Store id or URL",
+      "type": "string",
+      "editor": "textfield",
+      "description": "e.g. 570060128 or https://apps.apple.com/us/app/duolingo/id570060128"
+    },
+    "platforms": {
+      "title": "Platforms",
+      "type": "array",
+      "editor": "select",
+      "items": {
+        "type": "string",
+        "enum": [
+          "googlePlay",
+          "appStore"
+        ],
+        "enumTitles": [
+          "Google Play",
+          "App Store"
+        ]
+      },
+      "default": [
+        "googlePlay",
+        "appStore"
+      ],
+      "description": "Which stores to read."
+    },
+    "country": {
+      "title": "Country",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Two-letter store country (us, gb, de, jp…).",
+      "default": "us"
+    },
+    "lang": {
+      "title": "Language (Google Play)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Google Play review language (en, de, ja…). The App Store feed is per country, not per language.",
+      "default": "en"
+    },
+    "dateFrom": {
+      "title": "Date from",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Oldest review date (YYYY-MM-DD, UTC). Empty = no lower bound."
+    },
+    "dateTo": {
+      "title": "Date to",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Newest review date (YYYY-MM-DD, UTC, inclusive). Empty = now."
+    },
+    "maxReviews": {
+      "title": "Max reviews per platform",
+      "type": "integer",
+      "editor": "number",
+      "minimum": 1,
+      "maximum": 50000,
+      "default": 200,
+      "description": "App Store returns at most ~500 per country (Apple RSS limit)."
+    },
+    "summary": {
+      "title": "Write SUMMARY.md",
+      "type": "boolean",
+      "default": true,
+      "description": "Weekly rating trend + complaint categories and keywords for ≤3★ reviews."
+    }
+  },
+  "required": []
+}

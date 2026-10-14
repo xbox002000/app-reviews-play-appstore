@@ -1,0 +1,28 @@
+{
+  "actorSpecification": 1,
+  "name": "app-reviews-play-appstore",
+  "title": "App Reviews → Google Play + App Store (unified)",
+  "description": "Google Play + App Store reviews for one app in one run: unified dataset (rating, date, version, text, developer reply) plus a SUMMARY.md with weekly rating trend and ≤3★ complaint categories and keywords. ~$0.09 per 1,000 reviews. No login, no LLM.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "minMemoryMbytes": 128,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 256,
+    "timeoutSecs": 1800
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "changelog": "../CHANGELOG.md",
+  "categories": [
+    "DEVELOPER_TOOLS",
+    "AUTOMATION",
+    "AI"
+  ]
+}

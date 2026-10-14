@@ -1,0 +1,88 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Reviews",
+      "transformation": {
+        "fields": [
+          "platform",
+          "appId",
+          "appName",
+          "reviewId",
+          "rating",
+          "date",
+          "version",
+          "title",
+          "text",
+          "userName",
+          "developerReply",
+          "developerReplyDate",
+          "country",
+          "lang"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "platform": {
+            "label": "platform",
+            "format": "text"
+          },
+          "appId": {
+            "label": "appId",
+            "format": "text"
+          },
+          "appName": {
+            "label": "appName",
+            "format": "text"
+          },
+          "reviewId": {
+            "label": "reviewId",
+            "format": "text"
+          },
+          "rating": {
+            "label": "rating",
+            "format": "number"
+          },
+          "date": {
+            "label": "date",
+            "format": "date"
+          },
+          "version": {
+            "label": "version",
+            "format": "text"
+          },
+          "title": {
+            "label": "title",
+            "format": "text"
+          },
+          "text": {
+            "label": "text",
+            "format": "text"
+          },
+          "userName": {
+            "label": "userName",
+            "format": "text"
+          },
+          "developerReply": {
+            "label": "developerReply",
+            "format": "text"
+          },
+          "developerReplyDate": {
+            "label": "developerReplyDate",
+            "format": "text"
+          },
+          "country": {
+            "label": "country",
+            "format": "text"
+          },
+          "lang": {
+            "label": "lang",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}
